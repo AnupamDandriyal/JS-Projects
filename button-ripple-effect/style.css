@@ -41,7 +41,7 @@ body{
   top:var(--y);
   left:var(--x);
   transform: translate(-50%,-50%);
-  transition: all 0.5s;
+  transition: all 1s;
 }
 
 .btn:hover::before{
