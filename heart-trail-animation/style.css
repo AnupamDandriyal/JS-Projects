@@ -7,10 +7,11 @@ body{
   width:100vw;
   box-sizing: border-box;
   background-color: black;
+  overflow: hidden;
 }
 
 span{
-  background:url('https://cdn4.iconfinder.com/data/icons/fat-face/10'
+  background:url('https://cdn4.iconfinder.com/data/icons/general-office/91/General_Office_54-512.png');
   height:100px;
   width:100px;
   position: absolute;
@@ -25,16 +26,14 @@ span{
 
 @keyframes animate {
   0% {
-    background:url('https://cdn4.iconfinder.com/data/icons/fat-face/100/Unamused-64.png');
     transform: translate(-50%, -50%);
     opacity:1;
     filter:hue-rotate(0)
   }
   
   100%{
-    background:url('https://cdn4.iconfinder.com/data/icons/fat-face/100/Sobbing-512.png');
     transform: translate(-50%,-5000%);
     opacity: 0;
-    filter:hue-rotate(360deg);
+    filter:hue-rotate(720deg);
   }
 }
