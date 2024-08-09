@@ -1,0 +1,65 @@
+*{
+  padding:0;
+  margin:0;
+}
+
+body{
+  height:100vh;
+  width:100vw;
+  box-sizing: border-box;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  color:white;
+}
+
+.bgimg{
+  height:100%;
+  width:100%;
+  background-image: url(/Digital-Clock/pexels-maoriginalphotography-1485894.jpg);
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  position: absolute;
+  filter:blur(2px);
+  z-index: -1;
+ 
+}
+.container{
+  width:70%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.time-container{
+  width:100%;
+  display:flex;
+  gap:10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.hours,.minutes,.seconds{
+  text-align: center;
+  background-color: rgba(236, 140, 45, 0.505);
+  width:120px;
+}
+
+.value{
+  font-size: 4rem;
+  padding:10px
+}
+
+.title{
+  background-color:rgba(86, 45, 4, 0.505) ;
+  font-size: 0.9rem;
+  padding:8px 20px;
+}
+
+.stamp{
+  align-self: flex-end;
+  padding:7px 14px;
+  background-color: rgba(45, 198, 236, 0.505);
+  font-size:1.1rem
+}
