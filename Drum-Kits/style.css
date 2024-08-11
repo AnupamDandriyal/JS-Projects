@@ -1,0 +1,82 @@
+*{
+  margin:0;
+  padding:0
+}
+
+body{
+  height:100vh;
+  width:100vw;
+  box-sizing: border-box;
+  background-color: lightpink;
+  color:aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2{
+  font-size: 3rem;
+  font-weight: 550;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: -2px;
+  text-shadow:1px 1px 2px black;
+}
+.sounds{
+  display:flex;
+  margin-top:40px;
+  width:80%;
+  gap:20px
+}
+
+.item{
+  width:200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  box-shadow: 2px 3px 5px rgba(0,0,0,0.25);
+  color:goldenrod;
+  cursor:pointer;
+
+}
+
+.crash{
+  background-image: url('https://media.istockphoto.com/id/1439372294/photo/cymbal-of-drum-music-equipment.webp?b=1&s=170667a&w=0&k=20&c=Mc6iGWzk2xGqYl05Xv40cH5-ZHIq8OA8Rgy8QZgTwRA=');
+  background-position: center;
+  background-size: cover;
+  color:white
+}
+
+.kick{
+  background-image: url('https://media.istockphoto.com/id/468672101/photo/bass-drum.jpg?s=612x612&w=0&k=20&c=AtU9mPRLVPGDxWKtBC3tAN_fAIOmt_79VZrADNXIHY4=');
+  background-position: center;
+  background-size: cover;
+  color:white
+}
+
+.snare{
+  background-image: url('https://media.istockphoto.com/id/453596871/photo/red-snare-drum-with-sticks-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=jSFr69ZRZUga-HSJpjOe7aSRbIk-MdmObHsIRwZFLxE=');
+  background-position: center;
+  background-size: cover;
+  color:black
+}
+
+.tom{
+  background-image: url('https://media.istockphoto.com/id/1320830599/photo/drum-kit.jpg?s=612x612&w=0&k=20&c=8ZJpeqvLaqnppgyYMq3eT7zeccJ0U5dZs4L6BNIC08c=');
+  background-position: center;
+  background-size: cover;
+  color:White
+}
+
+.item.active{
+  transform: scale(1.15);
+}
