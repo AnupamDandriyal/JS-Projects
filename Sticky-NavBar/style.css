@@ -1,0 +1,89 @@
+*{
+  padding:0;
+  margin:0;
+}
+
+body{
+  height:100vh;
+  width:100vw;
+  box-sizing: border-box;
+}
+
+.navbar{
+  display:flex;
+  justify-content: space-between;
+  height:50px;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  background-color: aliceblue;
+  width:100%;
+}
+
+
+li{
+  display: inline-block;
+  margin-left:15px;
+}
+
+a{
+  text-decoration: none;
+  color:black;
+  font-size: 1rem;
+  font-weight: 550;
+}
+
+.logo{
+  height:100%;
+  width:50px
+}
+.left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.right{
+  padding-right: 30px;
+}
+
+.brand-name{
+  color:Orange;
+  font-size: 1.4rem;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.text{
+  width:95%;
+  margin:0 auto;
+  margin-bottom:30px
+}
+
+.poster{
+  width:100%;
+  object-fit: cover;
+  height: 800px;
+  margin-bottom:50px;
+  position: relative;
+  margin-top:20px
+}
+
+.poster-title{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translateX(-50%);
+  color:white;
+  font-size: 3rem;
+  font-weight: 550;
+}
+
+.scrolled{
+  background-color: darkcyan;
+  color:white
+}
+
+.scrolled a{
+  color:aliceblue
+}
