@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/Weather-App/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <title>Live Weather</title>
+</head>
+<body>
+  <div class="container">
+    <section class="searchbar">
+      <input type="text" placeholder="Enter city name">
+      <img src="/Weather-App/images/search.png" alt="search" class="search">
+    </section>
+    
+    <section class="data">
+      <img src="/Weather-App/images/clear.png" alt="" class="weathertype">
+      <div class="temp"><span class="tempvalue">7&deg;</span>C</div>
+      <div class="location">New York</div>
+    </section>
+
+    <section class="paramters">
+      <div class="climate">
+        <img src="/Weather-App/images/humidity.png" alt="" class="climateimg image">
+        <div class="dataset">
+          <div class="climatevalue">48<span>%</span>
+          </div>
+          <div class="climatetype">Humidity</div>
+        </div>
+      </div>
+
+      <div class="wind">
+        <img src="/Weather-App/images/wind.png" alt="" class="windimg image">
+        <div class="dataset">
+          <div class="speedvalue">10.29 <span>km/hr</span></div>
+          <div class="speed">Wind Speed</div>
+        </div>
+      </div>
+      
+    </section>
+  </div>
+
+  <script src="/Weather-App/index.js"></script>
+</body>
+</html>
