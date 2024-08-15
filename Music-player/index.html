@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/Music-player/style.css">
+  <title>Music Player</title>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="appControls">
+      <i class="fa fa-chevron-left"></i>
+      <i class="fa fa-bars"></i>
+    </div>
+    
+    <img src="/Music-player/wp5635131-amoled-4k-pc-wallpapers.jpg" alt="singer" class="songPic">
+    <p class="song">Blank Space</p>
+    <p class="singer">Taylor Swift</p>
+    <audio src="/Music-player/Taylor_Swift_-_Blank_Space(256k).mp3" controls></audio>
+   <!--  <div class="length">
+      <div class="audiolength"></div>
+      <div class="overlay"></div>
+    </div> -->
+    <input type="range" id="progress">
+    <div class="musicControls">
+      <i class="fa fa-backward" id="backward"></i>
+      <div>
+        <i class="fa fa-play play"></i>
+        <i class="fa fa-pause pause"></i> 
+       
+      </div>
+      <i class="fa fa-forward" id="forward"></i>
+    </div>
+
+  </div>
+
+  <script src="/Music-player/index.js"></script>
+</body>
+</html>
