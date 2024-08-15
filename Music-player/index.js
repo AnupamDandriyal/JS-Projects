@@ -7,7 +7,9 @@ let progress = document.getElementById('progress');
 music.onloadedmetadata = function () {
   progress.max = music.duration;
   progress.value = music.currentTime;
+  music.pause();
 }
+
 
 
 playMusic.addEventListener('click', () => {
