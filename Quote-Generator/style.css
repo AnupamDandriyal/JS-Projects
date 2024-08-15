@@ -1,0 +1,93 @@
+*{
+  padding:0;
+  margin:0;
+}
+
+body{
+  height:100vh;
+  width:100vw;
+  box-sizing: border-box;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(167, 197, 231);
+}
+
+.container{
+  background-color: white;
+  padding: 30px 50px;
+  border-radius: 5px;
+  box-shadow: 2px 4px 5px rgba(0,0,0,0.25);
+}
+
+h2{
+  text-align: center;
+}
+
+h2::after{
+  content:'';
+  display: block;
+  margin: 0 auto;
+  width:15%;
+  height:2px;
+  background-color: rgb(40, 107, 231);
+  margin-top:5px
+}
+
+.quote{
+  text-align: center;
+  width: 95%;
+  margin:0 auto;
+  font-size: 18px;
+  font-weight: 550;
+  margin-top:30px;
+  margin-bottom: 35px;
+
+}
+
+.author{
+  text-align: right;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+  font-weight: 548;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+.btns{
+  margin:0 auto;
+  text-align: center;
+}
+
+.btn{
+  width:120px;
+  padding:8px;
+  border-radius: 40px;
+}
+
+.create{
+  background-color:rgb(40, 107, 231);
+  color:White;
+  border:none;
+  margin-right:5px
+}
+
+.tweet{
+  color:rgb(40, 107, 231);
+  background-color: white;
+  border: 1px solid rgb(40, 107, 231);
+  margin-left: 5px;
+}
+
+span{
+  height:2px;
+  width:10px ;
+  background-color:rgb(40, 107, 231);
+  display: block;
+}
+
+.name{
+  
+}
