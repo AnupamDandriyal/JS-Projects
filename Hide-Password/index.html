@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/Hide-Password/style.css">
+  <title>Password</title>
+</head>
+<body>
+  <div class="password">
+    <input type="password" placeholder="password">
+    <i class="fa fa-eye" id="show"></i>
+    <i class="fa fa-eye-slash" id="hide"></i>
+  </div>
+
+  <script>
+    const inputEl = document.querySelector('input')
+    const open = document.getElementById('show');
+    const close =document.getElementById('hide');
+
+    open.addEventListener('click',()=>{
+      open.style.display = 'none';
+      close.style.display = 'block';
+      inputEl.type = 'password';
+      
+    })
+
+    close.addEventListener('click',()=>{
+      open.style.display = 'block';
+      close.style.display = 'none';
+      inputEl.type = 'text';
+    })
+  </script>
+</body>
+</html>

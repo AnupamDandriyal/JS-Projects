@@ -1,0 +1,44 @@
+*{
+  padding:0;
+  margin:0;
+}
+
+body{
+  display: flex;
+  height:100vh;
+  width:100vw;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(26, 26, 65);
+}
+
+.password{
+  width:30%;
+  margin:0 auto;
+  height: 30px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+}
+
+input{
+  width:90%;
+  height:100%;
+  border: none;
+  padding-left: 10px;
+  outline: none;
+}
+.fa{
+  padding-right:10px;
+  color:grey
+}
+.fa-eye{
+  color:orangered;
+  
+}
+
+#show{
+  display: none;
+}
