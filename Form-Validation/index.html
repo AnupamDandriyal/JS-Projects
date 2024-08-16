@@ -12,26 +12,34 @@
 <body>
   <div class="container">
     <i class="fa fa-paper-plane"></i>
+    <form>
     <div class="input-group">
       <label>Full Name</label>
-      <input type="text" placeholder="Enter your name">
+      <input type="text" placeholder="Enter your name" id="name" onkeyup="validateName()">
+      <span class="name-error"></span>
     </div>
     <div class="input-group">
       <label>Phone No.</label>
-      <input type="number" placeholder="123 456 7890">
+      <input type="number" placeholder="123 456 7890" id="phone" onkeyup="validatePhone()">
+      <span class="phone-error"></span>
     </div>
 
     <div class="input-group">
       <label>Email Id</label>
-      <input type="email" placeholder="Enter your mail">
+      <input type="email" placeholder="Enter your mail" id="mail" onkeyup="validateMail()">
+      <span class="email-error"></span>
     </div>
 
     <div class="input-group">
       <label>Your Message</label>
-      <textarea rows="5" cols="39" placeholder="Enter you message"></textarea>
+      <textarea rows="5" cols="46" placeholder="Enter you message" id="msg" onkeyup="validateMsg()"></textarea>
+      <span class="message-error"></span>
     </div>
-
-    <button class="submit" type="submit">Submit</button>
+    <div class="btn">
+      <button class="submit" onclick="validateForm()">Submit</button>
+      <span class="submit-error"></span>
+    </div>
+  </form>
   </div>
   <script src="/Form-Validation/index.js"></script>
 </body>
