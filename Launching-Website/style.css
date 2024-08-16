@@ -69,19 +69,22 @@ h1 span{
 }
 
 .rocket{
-  height:180px;
+  height:200px;
   opacity:0.4;
   position: absolute;
   top:50%;
   right: 10%;
-  animation: anime 0.4s smooth;
+  animation: anime 4s linear infinite;
 }
 
 @keyframes anime{
   0%{
-    bottom:5%;
+    bottom:2%;
+    opacity: 0.1;
+    
   }
   100%{
-    top:5%;
+    top:2%;
+    opacity: 0.7;
   }
 }
