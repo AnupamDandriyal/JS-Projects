@@ -13,14 +13,19 @@ body{
   justify-content: center;
   align-items: center;
 }
-
 .container{
+  display: flex;
+  flex-direction: column;
+  width:30%
+}
+
+.input{
   background-color: transparent;
-  border:1px solid grey;
+  border:2px solid grey;
   display: flex;
   height:35px;
   align-items: center;
-  width:30%;
+  width:100%;
   justify-content: space-around;
   border-radius: 3px;
 }
@@ -34,7 +39,7 @@ input{
   background-color: transparent;
 }
 
-.container span{
+.input span{
   display: flex;
   width:25px;
   height:25px;
@@ -50,5 +55,6 @@ input{
 }
 
 .strength{
-  margin-top:10px
+  margin-top:5px;
+  color:grey
 }
