@@ -23,7 +23,7 @@ const testimonialItem = document.querySelectorAll('.testimonialitem');
 
 testimonialItem.forEach((testimonial) => {
   
-  testimonial.addEventListener('click', () => {
+  testimonial.addEventListener('mousemove', () => {
     const stars = testimonial.querySelectorAll('i');
     stars.forEach((item, index) => {
       setTimeout(() => {
