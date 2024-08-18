@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.container {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+  margin-top: 10px;
+}
+
+.left{
+  height:100%
+}
+
+.left img {
+  height: 100%;
+}
+
+.right {
+  display: flex;
+  height: 100%;
+  padding-top: 28px;
+}
+
+.right li {
+  display: inline-block;
+ 
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+  font-size: 0.9rem;
+  margin-left: 1.2em;
+}
+
+li:hover{
+  transform: scale(1.1);
+}
+li a:hover{
+  color:orangered;
+  cursor: pointer;
+  font-weight: 550;
+}
+.right img{
+  height:23px;
+  margin-left: 1.2em;
+}
+
+.content{
+  display: flex;
+  width:100%;
+  justify-content: space-between;
+}
+
+.content .left{
+margin-top: 150px;
+}
+
+
+.content h1{
+  font-size: 4rem;
+}
+
+h1 span{
+  color:orangered
+}
+
+.content p{
+  font-size: 0.9rem;
+}
+
+.content button{
+  width:120px;
+  height:35px;
+  margin-top: 25px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color:White;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.content .handles{
+  margin-top:50px;
+  display: flex;
+  gap:30px;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+
+
+.content .right .pattern{
+  height:600px;
+  position: relative;
+}
+
+.content .right .girl{
+  height:600px;
+  position: absolute;
+  right:10%;
+}
