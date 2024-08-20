@@ -29,8 +29,34 @@ testimonialItem.forEach((testimonial) => {
       setTimeout(() => {
         item.style.color = 'yellow';
         item.style.boxShadow = '0 0 15px gold'
-      }, index * 500); // Increase delay for each star
+      }, index * 500); 
     });
   });
 })
   
+
+const navlinks = document.querySelectorAll('.navbar .right li a');
+function setActive() {
+  navlinks.forEach((item) => {
+    item.parentElement.classList.remove('active');
+    this.parentElement.classList.add('active')
+  })
+}
+
+navlinks.forEach((item) => {
+  item.addEventListener('click', setActive);
+})
+
+
+const close = document.querySelector('.close');
+const navRight = document.querySelector('.navcontent .right')
+close.addEventListener('click', () => {
+  navRight.style.right = '-182px'
+})
+
+
+
+const open = document.querySelector('.open');
+open.addEventListener('click', () => {
+  navRight.style.right = '-10px'
+})
