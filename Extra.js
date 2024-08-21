@@ -246,6 +246,6 @@ Promise.any([p1, p2, p3]).then(result => {
   console.log(result)
 }).catch(function (err){
   console.error(err);
-  console.log(err.errors)
+  console.log(err.errors )
 })
 

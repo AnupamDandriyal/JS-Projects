@@ -9,7 +9,7 @@ function show() {
   const m = s / 60;
   const h = m / 60;
   const d = h / 24;
-  const y = d / 365.25
+  const y = d / 365.25;
   age.innerHTML =`You are ${(Math.floor(y))} years old.`
 }
 
