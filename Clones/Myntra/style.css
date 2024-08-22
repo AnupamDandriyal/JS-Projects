@@ -24,6 +24,7 @@ body {
   position: fixed;
   top:0;
   left:0;
+  background-color: white;
 }
 
 .navContent{
@@ -47,7 +48,8 @@ body {
   position: relative;
 }
 .navContent .left img{
-  width:45px
+  width:50px;
+  cursor: pointer;
 }
 
 .navContent .left li{
@@ -59,7 +61,7 @@ body {
 
 .navContent .left li:hover {
   border-bottom:8px solid rgb(242, 7, 109) ;
-}
+} 
 
 
 .left li a{
@@ -73,15 +75,15 @@ body {
 .navContent .overlay{
   position: absolute;
   top:18px;
-  right:-22px;
+  right:-27px;
   color:rgb(242, 7, 109);
-  font-size: 0.55rem;
+  font-size: 0.7rem;
   font-weight: 550;
 }
 .navContent .right .search{
   height:35px;
   background-color: rgba(235, 232, 232, 0.444);
-  padding:0 6px;
+  padding:0 8px;
   display: flex;
   align-items: center;
   width:80%
@@ -101,7 +103,7 @@ body {
 .navContent .right .others{
   display: flex;
   margin-left:50px;
-  gap:10px
+  gap:15px
 }
 
 
@@ -111,6 +113,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  padding:10px 0;
+}
+
+.navContent .right .others .item:hover{
+  border-bottom: 5px solid orangered
 }
 
 .others .item i{
@@ -119,4 +127,14 @@ body {
 }
 .others .item span{
   font-size: 0.8rem;
+}
+
+.main{
+  margin-top:60px;
+  width:100%;
+}
+
+.main img{
+  width:100%;
+  object-fit: cover;
 }
