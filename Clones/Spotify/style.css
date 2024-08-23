@@ -11,7 +11,7 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   overflow-x: hidden;
-  color: whitesmoke;
+  color: lightgrey;
 }
 
 body::-webkit-scrollbar {
@@ -347,12 +347,12 @@ body::-webkit-scrollbar {
   background-image: linear-gradient(to bottom,green,#1fdf64);
   background-color:#1fdf64;
   display: flex;
-  height:50px;
   width:100%;
   color:black;
   font-size:2.3rem;
   justify-content: center;
   align-items: center;
+  min-height:60px
 }
 
 .left .library-content{
@@ -401,4 +401,14 @@ body::-webkit-scrollbar {
   gap:5px;
   justify-content: center;
   align-items: center;
+}
+.left .library-content .active{
+  color:green;
+  border:2px solid green;
+}
+
+.left .library-content .song .close{
+  font-size:1rem;
+  font-weight: 550;
+  cursor: pointer;
 }
