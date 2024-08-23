@@ -11,7 +11,11 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   overflow-x: hidden;
-  color: White;
+  color: whitesmoke;
+}
+
+body::-webkit-scrollbar {
+  width:0px
 }
 
 .container {
@@ -27,6 +31,7 @@ body {
   font-size:1rem;
   margin-right:3px;
   margin-top: 6px;
+  color:whitesmoke
 }
 
 .right {
@@ -41,6 +46,8 @@ body {
   padding-top:10px;
   display: flex;
   flex-direction: column;
+  position: relative;
+  height:97vh
 }
 
 .left .home {
@@ -78,23 +85,21 @@ body {
   font-weight: 600;
   font-size: 1.2rem;
 }
-.glow{
-  color:grey
-}
+
 .glow:hover{
   color:White;
   transition: all 0.15s ;
 }
 
-.spotify:hover{
+/* .spotify:hover{
   text-shadow: 0 0 20px white;
   transition: all 0.15s ;
-}
+} */
 
 .library{
   padding:5px;
   background-color: #3d3a3a4e;
-  color:#808080;
+  color:whitesmoke;
 }
 
 .library .heading{
@@ -132,7 +137,6 @@ body {
 
 .library .library-content:hover::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.771);
-
 }
 
 .library .playlist, .podcast{
@@ -187,7 +191,7 @@ body {
   background-color: transparent;
   border: none;
   outline: none;
-  color:White;
+  color:lightgrey;
   font-weight: 550;
   margin-right: 15px;
 }
@@ -202,13 +206,28 @@ body {
   border-radius: 30px;
 }
 
+.right .btns .signup:hover{
+  font-size: 0.95rem;
+  color:white;
+  cursor: pointer;
+}
+
+
+.right .btns .login:hover{
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
 
 .right .playlists{
   display: flex;
   flex-direction: column;
   border-radius: 5px;
   background-image:linear-gradient(to bottom,#302f2f4e,#0b0b0b );
-  padding:8px
+  padding:10px;
+  width:100%;
+ 
+ 
 }
 
 .right .playlists .top{
@@ -217,7 +236,7 @@ body {
   color:White;
   align-items: center;
   margin-bottom:20px;
-  width:97%;
+  width:95%;
 }
 
 
@@ -226,35 +245,60 @@ body {
 }
 
 .playlists .top p{
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 550;
 }
 
 .playlist-items{
   display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(165px,1fr));
-  width:97%;
-  margin:0 auto
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  width:96%;
+  margin:0 auto;
+  max-height: 70vh;
+  overflow-y: scroll;
+  gap:10px;
+ 
+}
+
+.playlist-items::-webkit-scrollbar {
+  width: 12px; 
+  opacity: 0;
+}
+
+.playlist-items:hover::-webkit-scrollbar {
+  width: 12px; 
+  opacity: 1;
+}
+
+.playlist-items:hover::-webkit-scrollbar-thumb {
+  background-color: #555; 
+  border-radius: 10px;
+  border: 3px solid #2e2e2e;
+}
+
+.playlist-items::-webkit-scrollbar-thumb:hover {
+  background-color: #888; 
 }
 
 .playlist-items .item{
   display: flex;
   flex-direction: column;
-  padding:8px;
+  padding:10px;
+  height:300px;
   position: relative;
  
 }
 
 .playlists .item img{
   width:100%;
-  height:150px;
+  height:200px;
   margin-bottom:10px;
   object-fit: cover;
 }
 
 .playlists .item p{
   margin-top:5px;
-  color:rgb(186, 185, 185);
+  color:whitesmoke;
   font-size: 0.75rem;
   font-weight: 550;
 }
@@ -279,8 +323,8 @@ body {
   border-radius: 50%;
   color:black;
   position: absolute;
-  right:10px;
-  bottom:65px;
+  right:12px;
+  bottom:85px;
   padding-left:3px;
   visibility: hidden;
   opacity: 0.5;
@@ -291,6 +335,22 @@ body {
 .playlist-items .item:hover i{
   visibility: visible;
   opacity: 1;
-  bottom:91px;
+  bottom:112px;
   transition: all 0.15s ease;
+}
+
+
+.playlists .playbar{
+  position: absolute;
+  bottom:0;
+  left:0;
+  background-image: linear-gradient(to bottom,green,#1fdf64);
+  background-color:#1fdf64;
+  display: flex;
+  height:50px;
+  width:100%;
+  color:black;
+  font-size:2.3rem;
+  justify-content: center;
+  align-items: center;
 }
