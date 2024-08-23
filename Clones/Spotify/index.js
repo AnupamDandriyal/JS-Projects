@@ -58,8 +58,10 @@ async function getData() {
       song.classList.remove('active');
       playNow.innerHTML = 'Play Now';
       playlogo.className = "bx bx-play-circle";
-      close.style.display = 'none';  // Hide the close button
+      close.style.display = 'none';  
     });
+
+    
   }
 }
 getData()
