@@ -354,3 +354,51 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
 }
+
+.left .library-content{
+  margin-top:35px;
+  height:300px
+}
+
+.left .library-content .song{
+  width:85%;
+  border:2px solid grey;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:8px;
+  margin: 0 auto;
+  color:lightgrey;
+  border-radius:5px;
+  margin-bottom: 10px;
+  height:45px
+}
+
+.left .library-content .song .info{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap:20px
+}
+
+.left .library-content .song .songDetails{
+  display:flex;
+  flex-direction: column;
+  width:100px
+}
+
+.left .library-content .song p{
+  font-size: 0.8rem;
+}
+
+.left .library-content .song i{
+  font-size: 1.5rem;
+}
+
+.left .library-content .song .player{
+  height:100%;
+  display: flex;
+  gap:5px;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,72 @@
+{
+  "audios": [
+    {
+      "name": "Alone pt.2",
+      "singer": "Alan Walker",
+      "source": "Clones/Spotify/Audios/Alan_Walker_-_Alone(256k).mp3"
+    },
+    {
+      "name": "Darkside",
+      "singer": "Alan Walker ft. AuRa",
+      "source": "Clones/Spotify/Audios/Alan_Walker_-_Darkside__feat._Au_Ra_and_Tomine_Harket_(256k).mp3"
+    },
+    {
+      "name": "All Too Well (10 min version)",
+      "singer": "Taylor Swift",
+      "source": "Clones/Spotify/Audios/All_Too_Well_(10_Minute_Version)_(Taylor's_Version)_(From_The_Vault)_(Lyric_Video)(256k).mp3"
+    },
+    {
+      "name": "Our Song",
+      "singer": "Anne Marie & Nial Horran",
+      "source": "Clones/Spotify/Audios/Anne-Marie_&_Niall_Horan_-_Our_Song_[Official_Video](256k).mp3"
+    },
+    {
+      "name": "Ciao Adias",
+      "singer": "Anne Marie",
+      "source": "Clones/Spotify/Audios/Anne-Marie_-_Ciao_Adios_[Official_Video](256k).mp3"
+    },
+    {
+      "name": "Side To Side",
+      "singer": "Ariana Grande",
+      "source": "Clones/Spotify/Audios/Ariana_Grande_-_Side_To_Side_(Lyrics)_ft._Nicki_Minaj(256k).mp3"
+    },
+    {
+      "name": "Kings and Queens",
+      "singer": "Ava Max",
+      "source": "Clones/Spotify/Audios/Ava_Max_-_Kings_&_Queens_[Official_Music_Video](256k).mp3"
+    },
+    {
+      "name": "Faded",
+      "singer": "Alan Walker",
+      "source": "Clones/Spotify/Audios/Alan_Walker_-_Faded(256k).mp3"
+    },
+    {
+      "name": "Sweet But Psycho",
+      "singer": "Ava Max",
+      "source": "Clones/Spotify/Audios/Ava_Max_-_Sweet_but_Psycho_(Lyrics)(256k).mp3"
+    },
+    {
+      "name": "Bad Blood",
+      "singer": "Taylor Swift",
+      "source": "Clones/Spotify/Audios/Bad_Blood_-_Taylor_Swift_(Lyrics)_🎵(256k).mp3"
+    },
+    {
+      "name": "Bejweled",
+      "singer": "Taylor Swift",
+      "source": "Clones/Spotify/Audios/Bejeweled(256k).mp3"
+    },
+    {
+      "name": "Your Eyes",
+      "singer": "Barney Sku",
+      "source": "Clones/Spotify/Audios/Barney_Sku_-_Your_eyes_(Official_Audio)_ft._Taqiya_Zaman(256k).mp3"
+    },
+    {
+      "name": "Dusk Till Dawn",
+      "singer": "Zayn Malik ft. Sia",
+      "source": "Clones/Spotify/Audios/ZAYN_-_Dusk_Till_Dawn_ft._Sia_(SING_OFF_vs._Madison_Beer)(256k).mp3"
+    }
+    
+  ]
+}
+
+
