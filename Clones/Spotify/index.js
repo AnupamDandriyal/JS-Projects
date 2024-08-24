@@ -1,10 +1,15 @@
 const songs = document.querySelector('.library-content');
+const Music = document.querySelector('.playbar audio');
+const playbarPlay = document.querySelector('.control .play');
+const playbarSong = document.querySelector('.songInfo .songName');
+const playbarSinger = document.querySelector('.songInfo .singer');
+const endStamp = document.querySelector('.playbar .songDuration .end');
 
 async function getData() {
   let response = await fetch('http://127.0.0.1:5500/Clones/Spotify/audiofiles.json');
   let data = await response.json();
   let audios = data.audios;
-  for (item of audios) {
+  for (let item of audios) {
     console.log(item.name);
     let song = document.createElement('div');
     song.className = 'song';
@@ -32,7 +37,7 @@ async function getData() {
     close.className = 'close';
     player.appendChild(playNow);
     player.appendChild(playlogo);
-    player.appendChild(close);
+    /* player.appendChild(close); */
     song.appendChild(info);
     song.appendChild(player);
     songs.appendChild(song);
@@ -47,24 +52,44 @@ async function getData() {
         if (existingClose) {
           existingClose.innerHTML = '';
         }
+        Music.pause();
+        Music.currentTime = 0;
       });
       song.classList.add('active');
       close.innerHTML = '&times;';
       playNow.innerHTML = 'Playing...';
       playlogo.className = "bx bx-pause-circle";
+      playMusic(item);
     });
-    close.addEventListener('click', (event) => {
-      event.stopPropagation();  // Prevent the song click event from firing
-      song.classList.remove('active');
-      playNow.innerHTML = 'Play Now';
-      playlogo.className = "bx bx-play-circle";
-      close.style.display = 'none';  
-    });
-
     
   }
 }
 getData()
+
+
+function playMusic(item) {
+  Music.src = item.source;
+  console.log(Music.duration)
+  Music.play();
+  playbarPlay.className = "bx bx-pause-circle play";
+  playbarSinger.innerHTML = item.singer;
+  playbarSong.innerHTML = item.name;
+  /* endStamp.innerHTML = playbar.duration; */
+}
+
+
+playbarPlay.addEventListener('click', () => {
+  if (Music.paused) {
+    Music.play();
+    playbarPlay.className = "bx bx-pause-circle play";
+  }
+  else {
+    Music.pause();
+    playbarPlay.className = "bx bx-play-circle play";
+  }
+});
+
+
 
 
 

@@ -360,28 +360,29 @@ body::-webkit-scrollbar {
 }
 
 .playbar .playbarContent{
-  width:90%;
+  width:95%;
   margin:0 auto;
-  border:1px solid;
-  height: 100%;
+  height: 90%;
   display: flex;
   align-items: center;
 }
 
 .playbarContent .songInfo{
-  height:100%;
+  height:90%;
   display: flex;
   flex-direction: column;
-  flex-basis:25%;
+  flex-basis:35%;
+  font-weight: 550;
+  justify-content: center;
 }
 
 
 .playbarContent .songInfo .songName{
-  font-size:1.7rem
+  font-size:1.35rem
 }
 
 .playbarContent .songInfo .singer{
-  font-size:1rem
+  font-size:0.9rem
 }
 .playbarContent .control{
   height:100%;
@@ -390,14 +391,44 @@ body::-webkit-scrollbar {
   flex-basis: 75%;
   width:100%;
   justify-content: center;
+  position: relative;
+  align-items: center;
+  cursor: pointer;
 }
 
 .playbarContent .control audio{
-  height:10px;
-  width:100%;
-  color:black
+  display: none;
 }
 
+
+.playbarContent .control .songDuration{
+  display: flex;
+  width:100%;
+  font-size: 0.8rem;
+  justify-content: space-between;
+}
+
+.playbarContent .control .seekbar{
+  height:5px;
+  width:100%;
+  background-color: black;
+  border-radius: 10px;
+  position: absolute;
+  bottom:10px
+}
+
+.playbarContent .control .seekbarControl{
+  height:12px;
+  width:12px;
+  border-radius: 50%;
+  background-color: #1fdf64;
+  position:absolute;
+  top:-6.5px;
+  left:10%;
+  box-shadow: 0 0 20px black;
+  border:3px solid black;
+  transition: left 0.5s ;
+}
 
 .left .library-content{
   margin-top:35px;
