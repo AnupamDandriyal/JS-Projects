@@ -226,7 +226,7 @@ body::-webkit-scrollbar {
   background-image:linear-gradient(to bottom,#302f2f4e,#0b0b0b );
   padding:10px;
   padding-bottom:5px;
-  width:98.3%;
+  width:100%;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius:5px ;
  
@@ -424,10 +424,26 @@ body::-webkit-scrollbar {
   background-color: #1fdf64;
   position:absolute;
   top:-6.5px;
-  left:10%;
+  left:0%;
   box-shadow: 0 0 20px black;
   border:3px solid black;
   transition: left 0.5s ;
+}
+
+
+.rotate {
+  animation: rotate 4s linear infinite
+}
+
+
+@keyframes rotate{
+  to{
+    transform: rotate(0deg);
+  }
+
+  from{
+    transform: rotate(-360deg);
+  }
 }
 
 .left .library-content{
