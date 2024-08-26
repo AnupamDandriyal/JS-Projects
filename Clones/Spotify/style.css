@@ -117,7 +117,7 @@ body::-webkit-scrollbar {
   justify-content: space-between;
   align-items: center;
   margin: 10px auto;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .library .heading div {
@@ -150,34 +150,6 @@ body::-webkit-scrollbar {
   background-color: rgba(255, 255, 255, 0.771);
 }
 
-.library .playlist,
-.podcast {
-  color: white;
-  background-color: #6662624e;
-  padding: 15px;
-  border-radius: 5px;
-  font-size: 1rem;
-  margin-bottom: 20px;
-  font-weight: 550;
-}
-
-.library .playlist p,
-.podcast p {
-  font-size: 0.9rem;
-  line-height: 20px;
-}
-
-.library .playlistBtn,
-.podcastBtn {
-  padding: 8px 12px;
-  border: none;
-  outline: none;
-  border-radius: 30px;
-  margin-top: 15px;
-  color: black;
-  font-weight: 550;
-  font-size: 0.8rem;
-}
 
 .right .top {
   display: flex;
@@ -301,25 +273,7 @@ body::-webkit-scrollbar {
   background-color: #888;
   border: 3px solid #2e2e2e;
 }
-/* .playlist-items::-webkit-scrollbar {
-  width: 12px;
-  opacity: 0;
-}
 
-.playlist-items:hover::-webkit-scrollbar {
-  width: 12px;
-  opacity: 1;
-}
-
-.playlist-items:hover::-webkit-scrollbar-thumb {
-  background-color: #555;
-  border-radius: 10px;
-  border: 3px solid #2e2e2e;
-}
-
-.playlist-items::-webkit-scrollbar-thumb:hover {
-  background-color: #888;
-} */
 
 .playlist-items .item {
   display: flex;
@@ -384,22 +338,24 @@ body::-webkit-scrollbar {
   left: 0;
   background-image: linear-gradient(to bottom, green, #1fdf64);
   background-color: #1fdf64;
-  width: 100%;
+  width: 95%;
+  margin: 0 auto;
   color: black;
   font-size: 2.3rem;
   height: 60px;
   border-radius: 5px;
-  padding: 10px 0;
+  padding: 10px;
   display: flex;
   flex-direction: column;
 }
 
 .playbar .playbarContent {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
   height: 90%;
   display: flex;
   align-items: center;
+  padding: 0 5px
 }
 
 .playbarContent .songInfo {
@@ -412,7 +368,7 @@ body::-webkit-scrollbar {
 }
 
 .playbarContent .songInfo .songName {
-  font-size: 1.35rem;
+  font-size: 1.28rem;
 }
 
 .playbarContent .songInfo .singer {
@@ -440,6 +396,41 @@ body::-webkit-scrollbar {
   font-size: 0.8rem;
   justify-content: space-between;
   margin-top: 5px;
+}
+
+.playbarContent .control .songDuration div{
+  display: flex;
+}
+
+.playbarContent .control .songDuration .volume{
+  font-size:1.1rem;
+  color: black;
+  position: relative;
+}
+
+.playbarContent .control .songDuration .volumeSeekbar{
+  position: absolute;
+  height:3px;
+  width:60px;
+  bottom:-2px;
+  right:15px;
+  display: none;
+}
+
+
+.playbarContent .control .songDuration .volumeSeekbar{
+  -webkit-appearance: none;
+  background-color: black;
+  cursor: pointer;
+}
+
+.volumeSeekbar::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  background-color: black;
+  border-radius: 50%;
+  height:10px;
+  width:10px;
+  cursor: pointer;
 }
 
 .playbarContent .control .seekbar {
@@ -486,7 +477,7 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
 }
 
 .left .library-content .song .songDetails {
@@ -576,7 +567,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   body{
     overflow-y: hidden;
   }
@@ -590,6 +581,7 @@ body::-webkit-scrollbar {
   .right {
     width: 100vw;
     height: 100vh;
+    margin-left: 5px;
   }
 
   .hamburger {
@@ -597,9 +589,9 @@ body::-webkit-scrollbar {
   }
 
   .left {
-    width: 100%;
+    width: 60%;
     background-color: black;
-    height: 1000%;
+   /*  height: 1000%; */
   }
 
   .close{
@@ -609,11 +601,14 @@ body::-webkit-scrollbar {
   .left .library-content{
     height:217px
   }
+
 }
+
 
 
 @media (max-width:350px){
   body{
     display: none;
   }
+
 }

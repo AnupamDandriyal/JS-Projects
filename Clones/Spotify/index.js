@@ -70,9 +70,6 @@ async function getData() {
         Music.pause();
         Music.currentTime = 0;
       });
-      /* song.classList.add('active');
-      playNow.innerHTML = 'Playing...';
-      playlogo.className = "bx bx-pause-circle"; */
       let index = getMusicIndex(item);
       playMusic(item,index);
     });
@@ -82,7 +79,7 @@ async function getData() {
     if (playFlag === false) {
       let song = document.querySelector('.song');
       song.classList.add('active');
-      document.querySelector('.song .playNow').innerHTML = 'Playing...';
+      document.querySelector('.song .playNow').innerHTML = 'Playing';
       document.querySelector('.song .playlogo').className = "bx bx-pause-circle";
       playMusic(audios[0],0);
     }
@@ -122,7 +119,7 @@ function playMusic(item, index) {
   });
   let currentSongElement = document.querySelectorAll('.song')[index];
   currentSongElement.classList.add('active');
-  currentSongElement.querySelector('.player p').innerHTML = 'Playing...';
+  currentSongElement.querySelector('.player p').innerHTML = 'Playing';
   currentSongElement.querySelector('.player i').className = "bx bx-pause-circle";
   Music.addEventListener('timeupdate', () => {
     if (!isNaN(Music.duration)) {
@@ -193,13 +190,23 @@ function getMusicIndex(Music) {
         return i;
       }
     }
-  
-
- 
 }
 
+let volume = document.querySelector('.volume');
+let volumeLevel = document.querySelector('.volumeSeekbar')
+volume.addEventListener('click', () => {
+  volume.style.marginRight = '70px';
+  volumeLevel.style.display = 'block';
+  setTimeout(() => {
+    volume.style.marginRight = '0px';
+    volumeLevel.style.display = 'none';
+  },7000)
+})
 
 
+document.querySelector('.volumeControls').getElementsByTagName('input')[0].addEventListener('change', (e) => {
+  Music.volume = parseInt(e.target.value)/100
+})
 
 
 
