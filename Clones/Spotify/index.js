@@ -13,6 +13,8 @@ async function getData() {
   let data = await response.json();
   let audios = data.audios;
   console.log(audios[0]);
+  playbarSong.innerHTML = audios[0].name;
+  playbarSinger.innerHTML = audios[0].singer
   for (let item of audios) {
     console.log(item.name);
     let song = document.createElement('div');
@@ -100,10 +102,11 @@ function playMusic(item) {
   playbarSinger.innerHTML = item.singer;
   playbarSong.innerHTML = item.name;
   Music.addEventListener('timeupdate', () => {
-    startStamp.innerHTML = formatAudioDuration(Music.currentTime);
-    endStamp.innerHTML = formatAudioDuration(Music.duration);
-    document.querySelector('.seekbarControl').style.left = (Music.currentTime / Music.duration) * 100 + "%";
-    playbarPlay.classList.add('rotate');  
+    if (!isNaN(Music.duration)) {
+      startStamp.innerHTML = formatAudioDuration(Music.currentTime);
+      endStamp.innerHTML = formatAudioDuration(Music.duration);
+      document.querySelector('.seekbarControl').style.left = (Music.currentTime / Music.duration) * 100 + "%"; 
+    }
   })
 }
 
@@ -126,3 +129,10 @@ Music.addEventListener('pause', () => {
 Music.addEventListener('play', () => {
   playbarPlay.classList.add('rotate'); // Ensure 'rotate' class is added when playing
 });
+
+
+document.querySelector('.seekbar').addEventListener('click', (e) => {
+  let percent = (e.offsetX/e.target.getBoundingClientRect().width)*100;
+  document.querySelector('.seekbarControl').style.left = percent + "%";
+  Music.currentTime = (Music.duration * percent) / 100;
+})
