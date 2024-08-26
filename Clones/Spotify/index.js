@@ -7,8 +7,8 @@ const startStamp = document.querySelector('.playbar .songDuration .start');
 const endStamp = document.querySelector('.playbar .songDuration .end');
 let Music = document.createElement('audio');
 let playFlag = false;
-
-
+let audios;
+let currMusic;
 document.querySelector('.hamburger').addEventListener('click', () => {
   document.querySelector('.left').style.left = '0'
 })
@@ -22,10 +22,10 @@ document.querySelector('.close').addEventListener('click', () => {
 async function getData() {
   let response = await fetch('http://127.0.0.1:5500/Clones/Spotify/audiofiles.json');
   let data = await response.json();
-  let audios = data.audios;
-  console.log(audios[0]);
+  audios = data.audios;
   playbarSong.innerHTML = audios[0].name;
-  playbarSinger.innerHTML = audios[0].singer
+  playbarSinger.innerHTML = audios[0].singer;
+  Music.src = audios[0].source;
   for (let item of audios) {
     console.log(item.name);
     let song = document.createElement('div');
@@ -70,10 +70,11 @@ async function getData() {
         Music.pause();
         Music.currentTime = 0;
       });
-      song.classList.add('active');
+      /* song.classList.add('active');
       playNow.innerHTML = 'Playing...';
-      playlogo.className = "bx bx-pause-circle";
-      playMusic(item);
+      playlogo.className = "bx bx-pause-circle"; */
+      let index = getMusicIndex(item);
+      playMusic(item,index);
     });
     
   }
@@ -83,7 +84,7 @@ async function getData() {
       song.classList.add('active');
       document.querySelector('.song .playNow').innerHTML = 'Playing...';
       document.querySelector('.song .playlogo').className = "bx bx-pause-circle";
-      playMusic(audios[0]);
+      playMusic(audios[0],0);
     }
   })
 
@@ -104,7 +105,9 @@ function formatAudioDuration(durationInSeconds) {
 }
 
 
-function playMusic(item) {
+function playMusic(item, index) {
+  console.log(item);
+  currMusic = item;
   playFlag = true;
   Music.src = item.source;
   playbar.appendChild(Music);
@@ -112,6 +115,15 @@ function playMusic(item) {
   playbarPlay.className = "bx bx-pause-circle play";
   playbarSinger.innerHTML = item.singer;
   playbarSong.innerHTML = item.name;
+  document.querySelectorAll('.song').forEach(s => {
+    s.classList.remove('active');
+    s.querySelector('.player p').innerHTML = 'Play Now';
+    s.querySelector('.player i').className = "bx bx-play-circle";
+  });
+  let currentSongElement = document.querySelectorAll('.song')[index];
+  currentSongElement.classList.add('active');
+  currentSongElement.querySelector('.player p').innerHTML = 'Playing...';
+  currentSongElement.querySelector('.player i').className = "bx bx-pause-circle";
   Music.addEventListener('timeupdate', () => {
     if (!isNaN(Music.duration)) {
       startStamp.innerHTML = formatAudioDuration(Music.currentTime);
@@ -147,3 +159,47 @@ document.querySelector('.seekbar').addEventListener('click', (e) => {
   document.querySelector('.seekbarControl').style.left = percent + "%";
   Music.currentTime = (Music.duration * percent) / 100;
 })
+
+
+
+document.querySelector('.prev').addEventListener('click', () => {
+  if (getMusicIndex(currMusic) === 0) {
+    Music.currentTime = 0;
+  }
+  else {
+    playMusic(audios[getMusicIndex(currMusic) - 1],getMusicIndex(currMusic)-1)
+  }
+})
+
+
+document.querySelector('.next').addEventListener('click', () => {
+  console.log(getMusicIndex(currMusic));
+  if (getMusicIndex(currMusic) === audios.length - 1) {
+    setTimeout(() => {
+      playMusic(audios[0], 0)
+    }, 500);
+  }
+  if (getMusicIndex(currMusic) < audios.length) {
+    playMusic(audios[getMusicIndex(currMusic)+1],getMusicIndex(currMusic)+1)
+  }
+ 
+})
+
+
+
+function getMusicIndex(Music) {
+    for (let i = 0; i < audios.length; i++){
+      if (Music.source.includes(audios[i].source)) {
+        return i;
+      }
+    }
+  
+
+ 
+}
+
+
+
+
+
+

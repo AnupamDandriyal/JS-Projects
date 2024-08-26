@@ -10,7 +10,7 @@ body {
   background-color: black;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  overflow: hidden;
+/*   overflow: hidden; */
   color: lightgrey;
 }
 
@@ -30,7 +30,7 @@ body::-webkit-scrollbar {
   gap: 5px;
   font-size: 1rem;
   margin-right: 3px;
-  margin-top: 10px;
+  margin-top: 8px;
   color: whitesmoke;
 }
 
@@ -39,7 +39,7 @@ body::-webkit-scrollbar {
   width: 80%;
   margin: 5px;
   margin-left: 3px;
-  margin-top: 10px;
+  margin-top: 8px;
   background-color: #3d3a3a4e;
   border-radius: 5px;
   font-size: 1rem;
@@ -108,7 +108,7 @@ body::-webkit-scrollbar {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  height:75vh
+  height:74.5vh
 }
 
 .library .heading {
@@ -247,7 +247,7 @@ body::-webkit-scrollbar {
   width: 100%;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  height: 100vh;
+  height: 91.5vh;
 }
 
 .right .playlists .top {
@@ -272,13 +272,36 @@ body::-webkit-scrollbar {
 .playlist-items {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  width: 95%;
+  width: 97%;
   margin: 10px auto;
   overflow-y: scroll;
   gap: 10px;
+  padding-left: 10px;
+  position: relative;
 }
 
+
 .playlist-items::-webkit-scrollbar {
+  width: 12px;
+  background: transparent; /* Make the scrollbar background transparent */
+}
+
+.playlist-items::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Initial transparent background */
+  border-radius: 10px;
+  border: 3px solid transparent; /* Transparent border to prevent occupying space */
+}
+
+.playlist-items:hover::-webkit-scrollbar-thumb {
+  background-color: #555; /* Visible on hover */
+  border: 3px solid #2e2e2e;
+}
+
+.playlist-items::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
+  border: 3px solid #2e2e2e;
+}
+/* .playlist-items::-webkit-scrollbar {
   width: 12px;
   opacity: 0;
 }
@@ -296,7 +319,7 @@ body::-webkit-scrollbar {
 
 .playlist-items::-webkit-scrollbar-thumb:hover {
   background-color: #888;
-}
+} */
 
 .playlist-items .item {
   display: flex;
@@ -574,7 +597,7 @@ body::-webkit-scrollbar {
   }
 
   .left {
-    width: 40vw;
+    width: 100%;
     background-color: black;
     height: 1000%;
   }
