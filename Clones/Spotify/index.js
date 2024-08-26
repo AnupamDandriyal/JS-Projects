@@ -8,6 +8,17 @@ const endStamp = document.querySelector('.playbar .songDuration .end');
 let Music = document.createElement('audio');
 let playFlag = false;
 
+
+document.querySelector('.hamburger').addEventListener('click', () => {
+  document.querySelector('.left').style.left = '0'
+})
+
+
+document.querySelector('.close').addEventListener('click', () => {
+  document.querySelector('.left').style.left = '-100%'
+})
+
+
 async function getData() {
   let response = await fetch('http://127.0.0.1:5500/Clones/Spotify/audiofiles.json');
   let data = await response.json();

@@ -10,12 +10,12 @@ body {
   background-color: black;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  overflow-x: hidden;
+  overflow: hidden;
   color: lightgrey;
 }
 
 body::-webkit-scrollbar {
-  width:0px
+  width: 0px;
 }
 
 .container {
@@ -28,26 +28,27 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  font-size:1rem;
-  margin-right:3px;
-  margin-top: 6px;
-  color:whitesmoke
+  font-size: 1rem;
+  margin-right: 3px;
+  margin-top: 10px;
+  color: whitesmoke;
 }
 
 .right {
   height: 100%;
   width: 80%;
   margin: 5px;
-  margin-left:3px;
-  margin-top: 6px;
-  background-color:#3d3a3a4e;
+  margin-left: 3px;
+  margin-top: 10px;
+  background-color: #3d3a3a4e;
   border-radius: 5px;
   font-size: 1rem;
-  padding-top:10px;
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   position: relative;
-  height:75vh
+  height: 75vh;
+  
 }
 
 .left .home {
@@ -58,6 +59,7 @@ body::-webkit-scrollbar {
   border-radius: 5px;
   background-color: #3d3a3a4e;
   margin-bottom: 3px;
+  height:17.5vh
 }
 
 .left .home i {
@@ -67,71 +69,80 @@ body::-webkit-scrollbar {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-
-.left .home .item{
+.left .home .item {
   display: flex;
   align-items: center;
   cursor: pointer;
   font-weight: 550;
 }
 
-.left .home .active{
-  color:white
+.left .home .active {
+  color: white;
 }
 
-
-.spotify{
+.spotify {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 10px;
   font-weight: 600;
   font-size: 1.2rem;
 }
-
-.glow:hover{
-  color:White;
-  transition: all 0.15s ;
+.spotify .close{
+  margin-top:5px;
 }
 
+.spotify span {
+  font-size:1.3rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.glow:hover {
+  color: White;
+  transition: all 0.15s;
+}
 
-
-.library{
-  padding:5px;
+.library {
+  padding: 5px;
   background-color: #3d3a3a4e;
-  color:whitesmoke;
+  color: whitesmoke;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  height:75vh
 }
 
-.library .heading{
-  width:90%;
+.library .heading {
+  width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin:10px auto;
-  margin-bottom:15px;
+  margin: 10px auto;
+  margin-bottom: 15px;
 }
 
-.library .heading div{
+.library .heading div {
   display: flex;
   align-items: center;
   font-weight: 550;
 }
 
-.library .heading .lib{
+.library .heading .lib {
   font-size: 1.4rem;
 }
-.library .library-content{
-  height:200px;
+.library .library-content {
+  height: 200px;
   overflow-y: scroll;
   background-color: rgba(60, 59, 59, 0.241);
-  padding:10px 0;
+  padding: 10px 0;
 }
 
 .library .library-content::-webkit-scrollbar {
-  width: 12px; 
+  width: 12px;
   opacity: 0;
 }
 
 .library .library-content:hover::-webkit-scrollbar {
-  width: 12px; 
+  width: 12px;
   opacity: 1;
 }
 
@@ -139,412 +150,447 @@ body::-webkit-scrollbar {
   background-color: rgba(255, 255, 255, 0.771);
 }
 
-.library .playlist, .podcast{
-  color:white;
+.library .playlist,
+.podcast {
+  color: white;
   background-color: #6662624e;
-  padding:15px;
-  border-radius:5px;
+  padding: 15px;
+  border-radius: 5px;
   font-size: 1rem;
-  margin-bottom:20px;
+  margin-bottom: 20px;
   font-weight: 550;
 }
 
-.library .playlist p, .podcast p{
+.library .playlist p,
+.podcast p {
   font-size: 0.9rem;
   line-height: 20px;
 }
 
-
-
-.library .playlistBtn, .podcastBtn{
+.library .playlistBtn,
+.podcastBtn {
   padding: 8px 12px;
-  border:none;
+  border: none;
   outline: none;
   border-radius: 30px;
-  margin-top:15px;
-  color:black;
+  margin-top: 15px;
+  color: black;
   font-weight: 550;
   font-size: 0.8rem;
 }
 
-
-.right .top{
+.right .top {
   display: flex;
-  justify-content: space-between;
-  width:96%;
-  margin:0 auto;
-  color:grey;
-  margin-bottom:8px;
+  width: 100%;
+  margin: 0 auto;
+  color: grey;
+  margin-bottom: 8px;
   align-items: center;
   border-radius: 5px;
+  justify-content: space-between;
 }
 
-.right .top i{
-  margin-top:5px;
+.right .top .mover {
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right .top .move {
+  margin-top: 5px;
   font-size: 1.8rem;
   background-color: black;
   border-radius: 50%;
-  color:White;
+  color: White;
   cursor: pointer;
 }
 
-.right .btns .signup{
+.right .btns .signup {
   background-color: transparent;
   border: none;
   outline: none;
-  color:lightgrey;
+  color: lightgrey;
   font-weight: 550;
   margin-right: 15px;
 }
 
-
-.right .btns .login{
+.right .btns .login {
   background-color: white;
-  border:none;
-  color:black;
-  padding:10px 15px;
+  border: none;
+  color: black;
+  padding: 10px 15px;
   font-weight: 550;
   border-radius: 30px;
 }
 
-.right .btns .signup:hover{
+.right .btns .signup:hover {
   font-size: 0.95rem;
-  color:white;
+  color: white;
   cursor: pointer;
 }
 
-
-.right .btns .login:hover{
+.right .btns .login:hover {
   cursor: pointer;
   font-size: 0.95rem;
 }
 
+.right .btns button {
+  margin-right: 20px;
+}
 
-.right .playlists{
+.right .playlists {
   display: flex;
   flex-direction: column;
-  background-image:linear-gradient(to bottom,#302f2f4e,#0b0b0b );
-  padding:10px;
-  padding-bottom:5px;
-  width:100%;
+  background-image: linear-gradient(to bottom, #302f2f4e, #0b0b0b);
+  padding-bottom: 5px;
+  width: 100%;
   border-bottom-left-radius: 5px;
-  border-bottom-right-radius:5px ;
- 
+  border-bottom-right-radius: 5px;
+  height: 100vh;
 }
 
-.right .playlists .top{
+.right .playlists .top {
   display: flex;
   justify-content: space-between;
-  color:White;
+  color: White;
   align-items: center;
-  margin-bottom:20px;
-  width:95%;
+  margin-bottom: 20px;
+  width: 95%;
+  margin-top: 10px;
 }
 
-
-.playlists .top h3{
+.playlists .top h3 {
   font-weight: 550;
 }
 
-.playlists .top p{
+.playlists .top p {
   font-size: 0.8rem;
   font-weight: 550;
 }
 
-.playlist-items{
-  display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-  width:97%;
-  margin:0 auto;
-  max-height: 74.2vh;
+.playlist-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  width: 95%;
+  margin: 10px auto;
   overflow-y: scroll;
-  gap:10px;
- 
+  gap: 10px;
 }
 
 .playlist-items::-webkit-scrollbar {
-  width: 12px; 
+  width: 12px;
   opacity: 0;
 }
 
 .playlist-items:hover::-webkit-scrollbar {
-  width: 12px; 
+  width: 12px;
   opacity: 1;
 }
 
 .playlist-items:hover::-webkit-scrollbar-thumb {
-  background-color: #555; 
+  background-color: #555;
   border-radius: 10px;
   border: 3px solid #2e2e2e;
 }
 
 .playlist-items::-webkit-scrollbar-thumb:hover {
-  background-color: #888; 
+  background-color: #888;
 }
 
-.playlist-items .item{
+.playlist-items .item {
   display: flex;
   flex-direction: column;
-  padding:10px;
-  height:300px;
+  padding: 10px;
+  height: 300px;
   position: relative;
- 
 }
 
-.playlists .item img{
-  width:100%;
-  height:200px;
-  margin-bottom:10px;
+.playlists .item img {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 10px;
   object-fit: cover;
 }
 
-.playlists .item p{
-  margin-top:5px;
-  color:whitesmoke;
+.playlists .item p {
+  margin-top: 5px;
+  color: whitesmoke;
   font-size: 0.75rem;
   font-weight: 550;
 }
 
-.playlists .item h4{
+.playlists .item h4 {
   font-size: 0.85rem;
 }
 
-.playlist-items .item:hover{
+.playlist-items .item:hover {
   background-color: #3d3a3a4e;
   border-radius: 5px;
 }
 
-.playlist-items .item i{
+.playlist-items .item i {
   font-size: 2.3rem;
   background-color: #1fdf64;
-  height:38px;
-  width:35px;
+  height: 38px;
+  width: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  color:black;
+  color: black;
   position: absolute;
-  right:12px;
-  bottom:85px;
-  padding-left:3px;
+  right: 12px;
+  bottom: 85px;
+  padding-left: 3px;
   visibility: hidden;
   opacity: 0.5;
   cursor: pointer;
 }
 
-
-.playlist-items .item:hover i{
+.playlist-items .item:hover i {
   visibility: visible;
   opacity: 1;
-  bottom:112px;
+  bottom: 112px;
   transition: all 0.15s ease;
 }
 
-
-.playlists .playbar{
+.playlists .playbar {
   position: sticky;
-  bottom:0;
-  left:0;
-  background-image: linear-gradient(to bottom,green,#1fdf64);
-  background-color:#1fdf64;
-  width:99%;
-  color:black;
-  font-size:2.3rem;
-  height:60px;
+  bottom: 8px;
+  left: 0;
+  background-image: linear-gradient(to bottom, green, #1fdf64);
+  background-color: #1fdf64;
+  width: 100%;
+  color: black;
+  font-size: 2.3rem;
+  height: 60px;
   border-radius: 5px;
-  padding:10px 0;
+  padding: 10px 0;
   display: flex;
   flex-direction: column;
 }
 
-.playbar .playbarContent{
-  width:95%;
-  margin:0 auto;
+.playbar .playbarContent {
+  width: 95%;
+  margin: 0 auto;
   height: 90%;
   display: flex;
   align-items: center;
 }
 
-.playbarContent .songInfo{
-  height:90%;
+.playbarContent .songInfo {
+  height: 90%;
   display: flex;
   flex-direction: column;
-  flex-basis:35%;
+  flex-basis: 35%;
   font-weight: 550;
   justify-content: center;
 }
 
-
-.playbarContent .songInfo .songName{
-  font-size:1.35rem
+.playbarContent .songInfo .songName {
+  font-size: 1.35rem;
 }
 
-.playbarContent .songInfo .singer{
-  font-size:0.9rem
+.playbarContent .songInfo .singer {
+  font-size: 0.9rem;
 }
-.playbarContent .control{
-  height:100%;
+.playbarContent .control {
+  height: 100%;
   display: flex;
   flex-direction: column;
   flex-basis: 75%;
-  width:100%;
+  width: 100%;
   justify-content: center;
   position: relative;
   align-items: center;
   cursor: pointer;
 }
 
-.playbarContent .control audio{
+.playbarContent .control audio {
   display: none;
 }
 
-
-.playbarContent .control .songDuration{
+.playbarContent .control .songDuration {
   display: flex;
-  width:100%;
+  width: 100%;
   font-size: 0.8rem;
   justify-content: space-between;
-  margin-top:5px
+  margin-top: 5px;
 }
 
-.playbarContent .control .seekbar{
-  height:5px;
-  width:100%;
+.playbarContent .control .seekbar {
+  height: 5px;
+  width: 100%;
   background-color: black;
   border-radius: 10px;
   position: absolute;
-  bottom:10px
+  bottom: 10px;
 }
 
-.playbarContent .control .seekbarControl{
-  height:12px;
-  width:12px;
+.playbarContent .control .seekbarControl {
+  height: 15px;
+  width: 15px;
   border-radius: 50%;
-  background-color: #1fdf64;
-  position:absolute;
-  top:-6.5px;
-  left:0%;
-  box-shadow: 0 0 20px black;
-  border:3px solid black;
-  transition: left 0.5s ;
+  background-color: darkgreen;
+  position: absolute;
+  top: -4.8px;
+  left: 0%;
+  box-shadow: 0 0 10px yellow;
+  transition: left 0.5s;
 }
 
-/* 
-.rotate {
-  animation: rotate 4s ease-in-out infinite
+.left .library-content {
+  margin-top: 35px;
+  height: 300px;
 }
 
-
-@keyframes rotate{
-  to{
-    transform: rotate(0deg);
-  }
-
-  from{
-    transform: rotate(-360deg);
-  }
-}
- */
-.left .library-content{
-  margin-top:35px;
-  height:300px
-}
-
-.left .library-content .song{
-  width:90%;
-  border:2px solid rgb(93, 94, 94);
-  display:flex;
+.left .library-content .song {
+  width: 90%;
+  border: 2px solid rgb(93, 94, 94);
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:8px;
+  padding: 8px;
   margin: 0 auto;
-  color:lightgrey;
-  border-radius:5px;
+  color: lightgrey;
+  border-radius: 5px;
   margin-bottom: 10px;
-  height:40px
+  height: 40px;
 }
 
-.left .library-content .song .info{
-  display:flex;
+.left .library-content .song .info {
+  display: flex;
   justify-content: center;
   align-items: center;
-  gap:20px
+  gap: 20px;
 }
 
-.left .library-content .song .songDetails{
-  display:flex;
+.left .library-content .song .songDetails {
+  display: flex;
   flex-direction: column;
-  width:100px
+  width: 100px;
 }
 
-.left .library-content .song p{
+.left .library-content .song p {
   font-size: 0.8rem;
 }
 
-.left .library-content .song i{
+.left .library-content .song i {
   font-size: 1.5rem;
 }
 
-.left .library-content .song .player{
-  height:100%;
+.left .library-content .song .player {
+  height: 100%;
   display: flex;
-  gap:5px;
+  gap: 5px;
   justify-content: center;
   align-items: center;
 }
-.left .library-content .active{
-  color:green;
-  border:2px solid green;
+.left .library-content .active {
+  color: green;
+  border: 2px solid green;
 }
 
-.left .library-content .song .close{
-  font-size:1rem;
+.left .library-content .song .close {
+  font-size: 1rem;
   font-weight: 550;
   cursor: pointer;
 }
 
-.left .library-content .song .closed{
-  color:lightgrey;
-  border-color:grey
+.left .library-content .song .closed {
+  color: lightgrey;
+  border-color: grey;
 }
 
-.left .footer{
-  padding-left:15px;
+.left .footer {
+  padding-left: 15px;
 }
-.left .footerlinks{
-  margin-top:20px;
-  margin-bottom:25px
+.left .footerlinks {
+  margin-top: 20px;
+  margin-bottom: 25px;
 }
 
-.left .footer .footerlinks li{
+.left .footer .footerlinks li {
   display: inline-block;
-  margin-right:20px;
+  margin-right: 20px;
 }
 
-.left .footerlinks li a{
+.left .footerlinks li a {
   font-size: 0.75rem;
   text-decoration: none;
-  color:darkgrey
+  color: darkgrey;
 }
 
-
-.left .footerlinks li a:hover{
-  color:White;
+.left .footerlinks li a:hover {
+  color: White;
   cursor: pointer;
 }
 
-.left .footer button{
+.left .footer button {
   display: flex;
   justify-content: center;
-  color:white;
+  color: white;
   background-color: transparent;
-  outline:none;
-  border:2px solid white;
+  outline: none;
+  border: 2px solid white;
   font-size: 1rem;
-  padding:8px 14px;
+  padding: 8px 14px;
   border-radius: 20px;
   font-weight: 550;
   cursor: pointer;
-  margin-bottom:85px
+}
+
+.hamburger {
+  display: none;
+  color: white;
+  font-size: 1.8rem;
+  margin-top: 8px;
+  margin-right: 10px;
+}
+
+.close{
+  display: none;
+}
+
+@media (max-width: 1400px) {
+  body{
+    overflow-y: hidden;
+  }
+  .left {
+    position: absolute;
+    left: -100%;
+    transition: all 0.4s ease-in-out;
+    z-index: 1;
+  }
+
+  .right {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .left {
+    width: 40vw;
+    background-color: black;
+    height: 1000%;
+  }
+
+  .close{
+    display: block;
+  }
+
+  .left .library-content{
+    height:217px
+  }
+}
+
+
+@media (max-width:350px){
+  body{
+    display: none;
+  }
 }
