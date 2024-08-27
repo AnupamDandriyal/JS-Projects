@@ -279,7 +279,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   padding: 10px;
-  height: 300px;
+  height: 280px;
   position: relative;
 }
 
@@ -288,6 +288,7 @@ body::-webkit-scrollbar {
   height: 200px;
   margin-bottom: 10px;
   object-fit: cover;
+  border-radius: 5px;
 }
 
 .playlists .item p {
