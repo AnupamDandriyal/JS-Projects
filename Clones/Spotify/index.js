@@ -6,6 +6,7 @@ const playbarSinger = document.querySelector('.songInfo .singer');
 const startStamp = document.querySelector('.playbar .songDuration .start');
 const endStamp = document.querySelector('.playbar .songDuration .end');
 let Music = document.createElement('audio');
+let playlistItems = document.querySelector('.playlist-items');
 let playFlag = false;
 let audios;
 let currMusic;
@@ -19,8 +20,42 @@ document.querySelector('.close').addEventListener('click', () => {
 })
 
 
+getPlaylists();
+async function getPlaylists() {
+  let response = await fetch('http://127.0.0.1:5500/Clones/Spotify/Playlists.json');
+  let data = await response.json();
+  let playlistData = data.playlists;
+  for (let playlist of playlistData) {
+    let item = document.createElement('div');
+    item.id = playlist.id;
+    item.className = 'item'
+    let pic = document.createElement('img');
+    pic.src = playlist.img;
+    let title = document.createElement('h4');
+    title.innerHTML = playlist.title;
+    let description = document.createElement('p');
+    description.innerHTML = playlist.description;
+    let bxPlay = document.createElement('i');
+    bxPlay.className = "bx bx-play";
+    item.appendChild(pic);
+    item.appendChild(title);
+    item.appendChild(description);
+    item.appendChild(bxPlay);
+    playlistItems.appendChild(item);
+
+    bxPlay.addEventListener('click', () => {
+      playlistClick();
+    })
+   /*  setTimeout(() => {
+      playlistClick();
+    },500) */
+  }
+}
+
+getData();
+
 async function getData(playlist = 'audiofiles') {
-  /* console.log(`Current playlist: ${playlist}`) */
+  
   document.title = `Spotify - ${playlist}`;
   let response = await fetch(`http://127.0.0.1:5500/Clones/Spotify/${playlist}.json`);
   let data = await response.json();
@@ -30,7 +65,6 @@ async function getData(playlist = 'audiofiles') {
   Music.src = audios[0].source;
   songs.innerHTML = '';
   for (let item of audios) {
-    console.log(item.name);
     let song = document.createElement('div');
     song.className = 'song';
     let info = document.createElement('div');
@@ -89,7 +123,7 @@ async function getData(playlist = 'audiofiles') {
   })
 
 }
-getData()
+
 
 
 
@@ -146,11 +180,11 @@ playbarPlay.addEventListener('click', () => {
 
 
 Music.addEventListener('pause', () => {
-  playbarPlay.classList.remove('rotate'); // Remove 'rotate' class when paused
+  playbarPlay.classList.remove('rotate'); 
 });
 
 Music.addEventListener('play', () => {
-  playbarPlay.classList.add('rotate'); // Ensure 'rotate' class is added when playing
+  playbarPlay.classList.add('rotate'); 
 });
 
 
@@ -212,11 +246,13 @@ document.querySelector('.volumeControls').getElementsByTagName('input')[0].addEv
 })
 
 
-
-
-document.querySelectorAll('.playlist-items .item').forEach((item) => {
-  item.addEventListener('click', () => {
-    let name = item.id;
-    getData(name);
+function playlistClick() {
+  document.querySelectorAll('.playlist-items .item').forEach((item) => {
+    item.addEventListener('click', () => {
+      let name = item.id;
+      console.log(name);
+      getData(name);
+    })
   })
-})
+}
+

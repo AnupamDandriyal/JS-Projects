@@ -1,0 +1,65 @@
+{
+  "playlists": [
+    {
+      "title": "Happy Hits!",
+      "id":"HappyHits",
+      "description": "Hits to boost your mood and fill you with happiness!",
+      "img" :"https://i.scdn.co/image/ab67706f0000000249a1ed33d2ca64e6a5d0e550"
+    },
+    {
+      "title": "Mood Booster",
+      "id":"MoodBooster",
+      "description": "Get happy with today's dose of feel-good songs!",
+      "img": "https://i.scdn.co/image/ab67706f000000028191cc41d8585df6170b3e5e"
+    },
+    {
+      "title": "Have a Great Day!",
+      "id":"GreatDay",
+      "description": "Feel greay with these timelessly fun songs!",
+      "img":"https://i.scdn.co/image/ab67706f000000021a50f52ecd03dc8bd4efb2e5"
+    },
+    {
+      "title": "Good Vibes",
+      "id":"Goodvibes",
+      "description": "Just good vibes all day long",
+      "img":"https://i.scdn.co/image/ab67706f0000000219b38bfde66a339b8bff7488" 
+    }, 
+    {
+      "title": "Happy Beats",
+      "id":"Happybeats",
+      "description": "Feel-good dance music!" ,
+      "img":"https://i.scdn.co/image/ab67706f00000002518096c62a9e453db38093db"
+    },
+    {
+      "title": "Feelin' Good",
+      "id":"Feelinggood",
+      "description": "Feel good with this positively timeless playlist!",
+      "img":"https://i.scdn.co/image/ab67706f00000002ab781467051aeba33fca1d20" 
+    },
+    {
+      "title": "Happy Jazz!",
+      "id":"Happyjazz",
+      "description": "Uplifting and upbeat Jazz to get you in a good mood.",
+      "img":"https://i.scdn.co/image/ab67706f0000000266cd9e77ea44228a40dd3a60" 
+    },
+    {
+      "title": "Feel-Good Indie Rock",
+      "id":"Indierock",
+      "description": "The best indie rock vives-classic and current" ,
+      "img":"https://i.scdn.co/image/ab67706f00000002e68acf89609707a72a76e20a"
+    },
+    {
+      "title": "Happy Folk",
+      "id":"Happyfolk",
+      "description": "Brighten your day with a mix of floksy mood" ,
+      "img":"https://i.scdn.co/image/ab67706f000000021f560efc069a01ec4a70d062"
+    },
+    {
+      "title": "Feel Good Soundtracks",
+      "id":"Feelgood",
+      "description": "Uplifting scores and soundtracks to make your moment" ,
+      "img":"https://i.scdn.co/image/ab67706f00000002ff0118a50272f3c35ae68ae1"
+    }
+   
+  ]
+}

@@ -318,7 +318,7 @@ body::-webkit-scrollbar {
   border-radius: 50%;
   color: black;
   position: absolute;
-  right: 12px;
+  right: 15px;
   bottom: 85px;
   padding-left: 3px;
   visibility: hidden;
@@ -329,7 +329,7 @@ body::-webkit-scrollbar {
 .playlist-items .item:hover i {
   visibility: visible;
   opacity: 1;
-  bottom: 112px;
+  bottom: 95px;
   transition: all 0.15s ease;
 }
 
