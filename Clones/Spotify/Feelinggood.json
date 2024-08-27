@@ -1,0 +1,31 @@
+{
+  "audios": [
+    {
+      "name": "Cias Adios",
+      "singer": "Anne Marie",
+      "source": "Audios/Anne-Marie_-_Ciao_Adios_[Official_Video](256k).mp3"
+    },
+    {
+      "name": "Side To Side",
+      "singer": "Ariane Grande ft. Nicki Minaj",
+      "source": "Audios/Ariana_Grande_-_Side_To_Side_(Lyrics)_ft._Nicki_Minaj(256k).mp3"
+    },
+    {
+      "name": "Kings & Queens",
+      "singer": "Ava Max",
+      "source": "Audios/Ava_Max_-_Kings_&_Queens_[Official_Music_Video](256k).mp3"
+    },
+    {
+      "name": "Sweet but Psycho",
+      "singer": "Ava Max",
+      "source": "Audios/Ava_Max_-_Sweet_but_Psycho_(Lyrics)(256k).mp3"
+    },
+    {
+      "name": "Bad Blood",
+      "singer": "Taylor Swift",
+      "source": "Audios/Bad_Blood_-_Taylor_Swift_(Lyrics)_🎵(256k).mp3"
+    }
+  ]
+}
+
+

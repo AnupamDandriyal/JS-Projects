@@ -1,0 +1,29 @@
+{
+  "audios": [
+    {
+      "name": "Dance The Night",
+      "singer": "Dua Lipa",
+      "source": "Audios/Dua_Lipa_-_Dance_The_Night_(From_Barbie_The_Album)_(Lyrics)(256k).mp3"
+    },
+    {
+      "name": "IDGAF",
+      "singer": "Dua lipa",
+      "source": "Audios/Dua_Lipa_-_IDGAF_(Official_Music_Video)(256k).mp3"
+    },
+    {
+      "name": "Levitating",
+      "singer": "Dua Lipa",
+      "source": "Audios/Dua_Lipa_-_Levitating_(Official_Animated_Music_Video)(128k).mp3"
+    },
+    {
+      "name": "Physical",
+      "singer": "Dua Lipa",
+      "source": "Audios/Dua_Lipa_-_Physical_(Official_Video)(128k).mp3"
+    },
+    {
+      "name": "We're Good",
+      "singer": "Dua Lipa",
+      "source": "Audios/Dua_Lipa_-_We're_Good_(Official_Music_Video)(256k).mp3"
+    }
+  ]
+}

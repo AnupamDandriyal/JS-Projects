@@ -1,0 +1,29 @@
+{
+  "audios": [
+    {
+      "name": "Way Down We Go",
+      "singer": "KALEO",
+      "source": "Audios/KALEO_-_Way_Down_We_Go_(Official_Music_Video)(256k).mp3"
+    },
+    {
+      "name": "Karma",
+      "singer": "Taylor Swift",
+      "source": "Audios/Karma(256k).mp3"
+    },
+    {
+      "name": "Running Up That Hill",
+      "singer": "Kate Bush",
+      "source": "Audios/Kate_Bush_-_Running_Up_That_Hill_(Stranger_Things_Version)(256k).mp3"
+    },
+    {
+      "name": "Harleys In Hawaii",
+      "singer": "Katy Perry",
+      "source": "Audios/Katy_Perry_-_Harleys_In_Hawaii_(Official)(256k).mp3"
+    },
+    {
+      "name": "Somewhere Only We Know",
+      "singer": "Keane",
+      "source": "Audios/Keane_-_Somewhere_Only_We_Know_(_Sped_Up_+_Lyrics_)(128k).m4a"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "audios": [
+    {
+      "name": "Alone Pt.2",
+      "singer": "Alan Walker",
+      "source": "Audios/Alan_Walker_-_Alone(256k).mp3"
+    },
+    {
+      "name": "Darkside",
+      "singer": "Alan Walker ft. AuRa",
+      "source": "Audios/Alan_Walker_-_Darkside__feat._Au_Ra_and_Tomine_Harket_(256k).mp3"
+    },
+    {
+      "name": "Faded",
+      "singer": "Alan Walker",
+      "source": "Audios/Alan_Walker_-_Faded(256k).mp3"
+    },
+    {
+      "name": "All Too Well (10 min version)",
+      "singer": "Taylor Swift",
+      "source": "Audios/All_Too_Well_(10_Minute_Version)_(Taylor's_Version)_(From_The_Vault)_(Lyric_Video)(256k).mp3"
+    },
+    {
+      "name": "Our Song",
+      "singer": "Anne Marie & Nial Horran",
+      "source": "Audios/Anne-Marie_&_Niall_Horan_-_Our_Song_[Official_Video](256k).mp3"
+    }
+  ]
+}
+
+

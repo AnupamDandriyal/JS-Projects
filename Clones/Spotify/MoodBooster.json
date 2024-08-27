@@ -1,0 +1,29 @@
+{
+  "audios": [
+    {
+      "name": "Snap",
+      "singer": "Rosa Linn",
+      "source": "Audios/Rosa_Linn_-_Snap_-_(Official_Eurovision_Music_Video)(256k).mp3"
+    },
+    {
+      "name": "Dandelions",
+      "singer": "Ruth B",
+      "source": "Audios/Ruth_B._-_Dandelions_(Lyrics)(256k).mp3"
+    },
+    {
+      "name": "Snow On The Beach",
+      "singer": "Taylor Swift",
+      "source": "Audios/Snow_On_The_Beach(256k).mp3"
+    },
+    {
+      "name": "Teenage Dreams",
+      "singer": "Stephen Dawes",
+      "source": "Audios/Stephen_Dawes_-_Teenage_Dream_(Lyric_Video)(256k).mp3"
+    },
+    {
+      "name": "Until I Found You",
+      "singer": "Stephen Sanchez",
+      "source": "Audios/Stephen_Sanchez_-__Until_I_Found_You___Official_Audio_(256k).mp3"
+    }
+  ]
+}

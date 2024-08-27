@@ -1,0 +1,29 @@
+{
+  "audios": [
+    {
+      "name": "As It Was",
+      "singer": "Harry Styles",
+      "source": "Audios/Harry_Styles_-_As_It_Was_(Official_Video)(256k).mp3"
+    },
+    {
+      "name": "Shiver",
+      "singer": "Ed Sheeran",
+      "source": "Audios/Ed_Sheeran_-_Shivers_[Official_Video](256k).mp3"
+    },
+    {
+      "name": "Middle Night",
+      "singer": "Elley Duhe",
+      "source": "Audios/Elley_Duhé_-_Middle_of_the_Night_(Lyrics)(256k).mp3"
+    },
+    {
+      "name": "Car's Outside",
+      "singer": "James Arthur",
+      "source": "Audios/James_Arthur_-_Car’s_outside_(sped_up)_Lyrics(128k).m4a"
+    },
+    {
+      "name": "Infinity",
+      "singer": "James Young",
+      "source": "Audios/Jaymes_Young_-_Infinity_[Official_Audio](256k).mp3"
+    }
+  ]
+}

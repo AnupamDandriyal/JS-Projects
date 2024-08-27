@@ -1,0 +1,31 @@
+{
+  "audios": [
+    {
+      "name": "Lovely",
+      "singer": "Billie Eilish, Khalid",
+      "source": "Audios/Billie_Eilish,_Khalid_-_lovely_(Lyrics)(256k).mp3"
+    },
+    {
+      "name": "Criminal",
+      "singer": "Britney Spears",
+      "source": "Audios/Britney_Spears_-_Criminal_(Official_Video)(256k).mp3"
+    },
+    {
+      "name": "Left & Right",
+      "singer": "Charlie Puth",
+      "source": "Audios/Charlie_Puth_-_Left_And_Right_(feat._Jung_Kook_of_BTS)_[Official_Video](256k).mp3"
+    },
+    {
+      "name": "We Don't Talk Anymore",
+      "singer": "Charlie Puth",
+      "source": "Audios/Charlie_Puth_-_We_Don't_Talk_Anymore_(feat._Selena_Gomez)_[Official_Video](256k).mp3"
+    },
+    {
+      "name": "Don't Blame Me",
+      "singer": "Taylor Swift",
+      "source": "Audios/Don’t_Blame_Me(256k).mp3"
+    }
+  ]
+}
+
+

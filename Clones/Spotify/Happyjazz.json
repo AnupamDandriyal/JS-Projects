@@ -1,0 +1,29 @@
+{
+  "audios": [
+    {
+      "name": "Doin Time",
+      "singer": "Lana Del Rey",
+      "source": "Audios/Lana_Del_Rey_-_Doin_Time_(Lyrics)(256k).mp3"
+    },
+    {
+      "name": "Let Me Down Slowly",
+      "singer": "Gravero",
+      "source": "Audios/Let_Me_Down_Slowly_x_Main_Dhoondne_Ko_Zamaane_Mein__Gravero_Mashup____Full_Version(256k).mp3"
+    },
+    {
+      "name": "People",
+      "singer": "Libianca",
+      "source": "Audios/Libianca_-_People_(Check_On_Me)_[Official_Music_Video](256k).mp3"
+    },
+    {
+      "name": "About Damn Time",
+      "singer": "Lizzo",
+      "source": "Audios/Lizzo_-_About_Damn_Time_[Official_Video](256k).mp3"
+    },
+    {
+      "name": "Despacito",
+      "singer": "Louis Fonsi",
+      "source": "Audios/Luis_Fonsi_-_Despacito_ft._Daddy_Yankee_&_Justin_Bieber_(SING_OFF_vs._Pixie_Lott)(256k).mp3"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "audios": [
+    {
+      "name": "Good in GoodBye",
+      "singer": "Nadison Beer",
+      "source": "Audios/Madison_Beer_-_Good_in_Goodbye_(Lyrics)(256k).mp3"
+    },
+    {
+      "name": "Midnight Rain",
+      "singer": "Taylor Swift",
+      "source": "Audios/Midnight_Rain(256k).mp3"
+    },
+    {
+      "name": "Flowers",
+      "singer": "Miley Cyrus",
+      "source": "Audios/Miley_Cyrus_-_Flowers_(Official_Video)(256k).mp3"
+    },
+    {
+      "name": "We Can't Stop",
+      "singer": "Miley Cyrus",
+      "source": "Audios/Miley_Cyrus_-_We_Can't_Stop_(Official_Video)(256k).mp3"
+    },
+    {
+      "name": "1 Step Forward",
+      "singer": "Olivia Rodrigo",
+      "source": "Audios/Olivia_Rodrigo_-_1_step_forward,_3_steps_back_(Lyric_Video)(256k).mp3"
+    }
+  ]
+}

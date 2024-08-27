@@ -19,13 +19,16 @@ document.querySelector('.close').addEventListener('click', () => {
 })
 
 
-async function getData() {
-  let response = await fetch('http://127.0.0.1:5500/Clones/Spotify/audiofiles.json');
+async function getData(playlist = 'audiofiles') {
+  /* console.log(`Current playlist: ${playlist}`) */
+  document.title = `Spotify - ${playlist}`;
+  let response = await fetch(`http://127.0.0.1:5500/Clones/Spotify/${playlist}.json`);
   let data = await response.json();
   audios = data.audios;
   playbarSong.innerHTML = audios[0].name;
   playbarSinger.innerHTML = audios[0].singer;
   Music.src = audios[0].source;
+  songs.innerHTML = '';
   for (let item of audios) {
     console.log(item.name);
     let song = document.createElement('div');
@@ -211,3 +214,9 @@ document.querySelector('.volumeControls').getElementsByTagName('input')[0].addEv
 
 
 
+document.querySelectorAll('.playlist-items .item').forEach((item) => {
+  item.addEventListener('click', () => {
+    let name = item.id;
+    getData(name);
+  })
+})

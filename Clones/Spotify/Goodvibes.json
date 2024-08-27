@@ -1,0 +1,31 @@
+{
+  "audios": [
+    {
+      "name": "Your Eyes",
+      "singer": "Barney Sku",
+      "source": "Audios/Barney_Sku_-_Your_eyes_(Official_Audio)_ft._Taqiya_Zaman(256k).mp3"
+    },
+    {
+      "name": "Bejeweled",
+      "singer": "Taylor Swift",
+      "source": "Audios/Bejeweled(256k).mp3"
+    },
+    {
+      "name": "Christmas Lights",
+      "singer": "Zach Seabaugh",
+      "source": "Audios/Zach_Seabaugh_-__Christmas_Lights___Official_Video_(128k).m4a"
+    },
+    {
+      "name": "Dusk till Dawn Cover",
+      "singer": "Conor Maynard",
+      "source": "Audios/ZAYN_-_Dusk_Till_Dawn_ft._Sia_(SING_OFF_vs._Madison_Beer)(256k).mp3"
+    },
+    {
+      "name": "Dancin",
+      "singer": "Aaron Smith",
+      "source": "Audios/Aaron_Smith_-_Dancin_(KRONO_Remix)_-_Lyrics(256k).mp3"
+    }
+  ]
+}
+
+
