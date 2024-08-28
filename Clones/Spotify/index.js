@@ -22,7 +22,7 @@ document.querySelector('.close').addEventListener('click', () => {
 
 getPlaylists();
 async function getPlaylists() {
-  let response = await fetch('http://127.0.0.1:5500/Clones/Spotify/Playlists.json');
+  let response = await fetch('http://127.0.0.1:5500/Clones/Spotify/JSONs/Playlists.json');
   let data = await response.json();
   let playlistData = data.playlists;
   for (let playlist of playlistData) {
@@ -43,12 +43,14 @@ async function getPlaylists() {
     item.appendChild(bxPlay);
     playlistItems.appendChild(item);
 
-    bxPlay.addEventListener('click', () => {
+    item.addEventListener('click', () => {
       playlistClick();
     })
-   /*  setTimeout(() => {
-      playlistClick();
-    },500) */
+    bxPlay.addEventListener('click', () => {
+      setTimeout(() => {
+        playMusic(audios[0],0)
+      },1000)
+    })
   }
 }
 
@@ -57,7 +59,7 @@ getData();
 async function getData(playlist = 'audiofiles') {
   
   document.title = `Spotify - ${playlist}`;
-  let response = await fetch(`http://127.0.0.1:5500/Clones/Spotify/${playlist}.json`);
+  let response = await fetch(`http://127.0.0.1:5500/Clones/Spotify/JSONs/${playlist}.json`);
   let data = await response.json();
   audios = data.audios;
   playbarSong.innerHTML = audios[0].name;
@@ -70,7 +72,6 @@ async function getData(playlist = 'audiofiles') {
     let info = document.createElement('div');
     info.className = 'info';
     let audiologo = document.createElement('i');
-    /* audiologo.className = "audiologo"; */
     audiologo.className = "bx bxs-music music";
     let songDetails = document.createElement('div');
     songDetails.className = 'songDetails';
@@ -140,7 +141,7 @@ function formatAudioDuration(durationInSeconds) {
 
 
 function playMusic(item, index) {
-  console.log(item);
+ /*  console.log(item); */
   currMusic = item;
   playFlag = true;
   Music.src = item.source;
@@ -167,6 +168,7 @@ function playMusic(item, index) {
   })
 }
 
+
 playbarPlay.addEventListener('click', () => {
   if (Music.paused) {
     Music.play();
@@ -178,14 +180,6 @@ playbarPlay.addEventListener('click', () => {
   }
 })
 
-
-Music.addEventListener('pause', () => {
-  playbarPlay.classList.remove('rotate'); 
-});
-
-Music.addEventListener('play', () => {
-  playbarPlay.classList.add('rotate'); 
-});
 
 
 document.querySelector('.seekbar').addEventListener('click', (e) => {
@@ -242,7 +236,15 @@ volume.addEventListener('click', () => {
 
 
 document.querySelector('.volumeControls').getElementsByTagName('input')[0].addEventListener('change', (e) => {
-  Music.volume = parseInt(e.target.value)/100
+  Music.volume = parseInt(e.target.value) / 100;
+  let volumelogo = document.querySelector('.volume');
+  /* console.log(mute) */
+  if (Music.volume == 0) {
+    volumelogo.className = "bx bxs-volume-mute volume";
+  }
+  else {
+    volumelogo.className = "bx bxs-volume volume";
+  }
 })
 
 
@@ -250,8 +252,9 @@ function playlistClick() {
   document.querySelectorAll('.playlist-items .item').forEach((item) => {
     item.addEventListener('click', () => {
       let name = item.id;
-      console.log(name);
+      /* console.log(name); */
       getData(name);
+     
     })
   })
 }

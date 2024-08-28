@@ -281,6 +281,7 @@ body::-webkit-scrollbar {
   padding: 10px;
   height: 280px;
   position: relative;
+  margin-bottom: 15px;
 }
 
 .playlists .item img {
@@ -566,6 +567,10 @@ body::-webkit-scrollbar {
 
 .close{
   display: none;
+}
+
+.songDuration{
+  font-weight: 550;
 }
 
 @media (max-width: 1200px) {
